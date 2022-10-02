@@ -26,3 +26,7 @@ export default function Navbar(props) {
 </nav>
   )
 }
+Navbar.prototype = {
+  title : propTypes.string.isRequired,
+  about : propTypes.string.isRequired
+}
