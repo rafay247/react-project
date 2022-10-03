@@ -23,6 +23,7 @@ export default function Textform(props) {
         <di className="container my-3">
             <h1>Your text summery</h1>
             <p>{text.split(' ').length} words {text.length} character</p>
+            <p>{0.008 * text.split(' ').length} Minutes read</p>
         </di>
         </>
     )
