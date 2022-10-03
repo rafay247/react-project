@@ -24,6 +24,8 @@ export default function Textform(props) {
             <h1>Your text summery</h1>
             <p>{text.split(' ').length} words {text.length} character</p>
             <p>{0.008 * text.split(' ').length} Minutes read</p>
+            <h2>Preview</h2>
+            <p>{text}</p>
         </di>
         </>
     )
