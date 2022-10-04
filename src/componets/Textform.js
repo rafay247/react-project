@@ -18,6 +18,17 @@ export default function Textform(props) {
         setText(event.target.value)
 
     }
+    const handleCopyClick = () => {
+        let text = document.getElementById('myBox')
+        text.select();
+        navigator.clipboard.writeText(text.value)
+
+    }
+    const handleRmoveSpacerClick = () => {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" ")) 
+    }
+
     const [text, setText] = useState("")
     return (
         <>
@@ -30,6 +41,8 @@ export default function Textform(props) {
                     <button className='btn btn-secondary mx-1' onClick={handleUpClick}>Convert to Uppercase</button>
                     <button className='btn btn-secondary mx-1' onClick={handleLoClick}>Convert to Lowercase</button>
                     <button className='btn btn-secondary mx-1' onClick={handleClearClick}>Clear text</button>
+                    <button className='btn btn-secondary mx-1' onClick={handleCopyClick}>Copy text</button>
+                    <button className='btn btn-secondary mx-1' onClick={handleRmoveSpacerClick}>Remove extra spaces</button>
                 </div>
                 <div className="container my-2">
                     <h2>Your text summery</h2>
