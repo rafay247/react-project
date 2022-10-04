@@ -7,6 +7,9 @@ export default function About() {
         backgroundColor: 'white',
     })
     const [btnText,setBtnText] = useState("Dark mode")
+
+    const [btnClass,setBtnClass] = useState("btn btn-dark my-2")
+
     
     const toggleStyle = () => {
         if(myStyle.color === 'black'){
@@ -15,12 +18,14 @@ export default function About() {
                 backgroundColor: 'black' 
             })
             setBtnText("Light mode")
+            setBtnClass("btn btn-light my-2")
         }else{
             setStyle({
                 color: "black",
                 backgroundColor: "white" 
             })
             setBtnText("Dark mode")
+            setBtnClass("btn btn-dark my-2")
         }
     }
     return (
@@ -66,7 +71,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className="container my-3">
-                <button className='btn btn-secondary my-2' type='button' onClick={toggleStyle}>{btnText}</button>
+                <button className= {btnClass} type='button' onClick={toggleStyle}>{btnText}</button>
                 </div>
             </div>
         </>
