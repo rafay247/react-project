@@ -28,6 +28,7 @@ export default function Textform(props) {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
     }
+    const btnClassObj =  `btn btn-${props.mode === 'dark' ? 'light': 'dark'} mx-1`
 
     const [text, setText] = useState("")
     return (
@@ -38,11 +39,11 @@ export default function Textform(props) {
                     <div className="mb-4" >
                         <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="6" style={{ backgroundColor: props.mode === 'dark' ? 'black' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }}></textarea>
                     </div>
-                    <button className='btn btn-dark mx-1' onClick={handleUpClick}>Convert to Uppercase</button>
-                    <button className='btn btn-dark mx-1' onClick={handleLoClick}>Convert to Lowercase</button>
-                    <button className='btn btn-dark mx-1' onClick={handleClearClick}>Clear text</button>
-                    <button className='btn btn-dark mx-1' onClick={handleCopyClick}>Copy text</button>
-                    <button className='btn btn-dark mx-1' onClick={handleRmoveSpacerClick}>Remove extra spaces</button>
+                    <button className={btnClassObj} onClick={handleUpClick}>Convert to Uppercase</button>
+                    <button className={btnClassObj} onClick={handleLoClick}>Convert to Lowercase</button>
+                    <button className={btnClassObj} onClick={handleClearClick}>Clear text</button>
+                    <button className={btnClassObj} onClick={handleCopyClick}>Copy text</button>
+                    <button className={btnClassObj} onClick={handleRmoveSpacerClick}>Remove extra spaces</button>
                 </div>
                 <div className="container my-2">
                     <h2>Your text summery</h2>
