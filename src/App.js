@@ -6,11 +6,11 @@ import Textform from "./componets/Textform";
 
 function App() {
 
-  const [mode, setMode] = useState('Light');
+  const [Mode, setMode] = useState('Light');
 
   return (
   <>
-  <Navbar title="TextUtils" about="textutils about" />
+  <Navbar title="TextUtils" about="textutils about" mode={Mode} />
   <Textform heading = "Enter the text to analyze"/>
   {/* <About/> */}
   </>
