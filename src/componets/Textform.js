@@ -53,8 +53,8 @@ export default function Textform(props) {
                 </div>
                 <div className="container my-2">
                     <h2>Your text summery</h2>
-                    <p>{text.split(' ').length - 1} words {text.length} character</p>
-                    <p>{0.008 * (text.split(' ').length - 1)} Minutes read</p>
+                    <p>{text.split(/[^\s]+/).length - 1} words {text.trim().length} character</p>
+                    <p>{0.008 * (text.split(/[^\s]+/).length - 1)} Minutes read</p>
                     <h3>Preview</h3>
                     <p>{text.length > 0 ? text : "Enter something in the above textbox to preview it here"}</p>
                 </div>
