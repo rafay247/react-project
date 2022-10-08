@@ -34,7 +34,7 @@ export default function Textform(props) {
         setText(newText.join(" "))
         props.showAlert("Extra spaces removed", "success");
     }
-    const btnClassObj =  `btn btn-${props.mode === 'dark' ? 'light': 'dark'} mx-1`
+    const btnClassObj =  `btn btn-${props.mode === 'dark' ? 'light': 'dark'} mx-1 my-1`
 
     const [text, setText] = useState("")
     return (
