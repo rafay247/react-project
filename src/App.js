@@ -26,13 +26,13 @@ function App() {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been eanabled", 'success')
-      document.title = "TextUtils - Light mode";
+      // document.title = "TextUtils - Light mode";
     }
     else {
       setMode('dark');
       document.body.style.backgroundColor = 'black';
       showAlert("Dark mode has been eanabled", 'success')
-      document.title = "TextUtils - Dark mode";
+      // document.title = "TextUtils - Dark mode";
     }
   };
   return (
