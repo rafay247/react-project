@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import "./App.css";
-import About from "./componets/About";
+// import About from "./componets/About";
 import Navbar from "./componets/Navbar";
 import Textform from "./componets/Textform";
 import Alert from "./componets/Alert";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
 
@@ -37,18 +37,17 @@ function App() {
   };
   return (
     <>
-      <Router>
-        <Navbar title="TextUtils" about="about" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        <Switch>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/">
-            <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
-          </Route>
-        </Switch>
-      </Router>
+      {/* <Router> */}
+      <Navbar title="TextUtils" about="about" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+
+      {/* <Routes> */}
+      {/* <Route exact path="/about" element={<About/> }/> */}
+      {/* <Route exact path="/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />} /> */}
+      <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
+      {/* </Routes> */}
+
+      {/* </Router> */}
     </>
   )
 }
