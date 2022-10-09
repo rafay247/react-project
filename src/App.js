@@ -22,28 +22,28 @@ function App() {
   }, 2500);
 
   const toggleMode = () => {
-    if (mode === 'dark') {
-      setMode('light');
-      document.body.style.backgroundColor = 'white';
-      showAlert("Light mode has been eanabled", 'success')
-      // document.title = "TextUtils - Light mode";
-    }
-    else {
+    if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = 'black';
       showAlert("Dark mode has been eanabled", 'success')
       // document.title = "TextUtils - Dark mode";
     }
+    else {
+      setMode('light');
+      document.body.style.backgroundColor = 'white';
+      showAlert("Light mode has been eanabled", 'success')
+      // document.title = "TextUtils - Light mode";
+    }
   };
   return (
     <>
       <Router>
-        <Navbar title="TextUtils" about="about" mode={mode} toggleMode={toggleMode} />
+        <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
 
         <Routes>
-          <Route exact path="react-project/about" element={<About mode={mode} />} />
-          <Route exact path="react-project/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
+          <Route exact path="about" element={<About mode={mode} />} />
+          <Route exact path="/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
         </Routes>
 
       </Router>
